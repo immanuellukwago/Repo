@@ -9,7 +9,6 @@ public class Panel extends JPanel implements ActionListener {
     final int PANEL_WIDTH = 500;
     final int PANEL_HEIGHT = 500;
     Image icon;
-    Image icon2;
     Timer timer;
     int xVelocity = 3;
     int yVelocity = 1;
