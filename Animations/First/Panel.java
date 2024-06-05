@@ -20,7 +20,6 @@ public class Panel extends JPanel implements ActionListener {
         this.setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
         this.setBackground(Color.white);
         icon = new ImageIcon("Animations/images/apple.png").getImage();
-        icon2 = new ImageIcon("Animations/images/android.png").getImage();
         timer = new Timer(20, this);
         timer.start();
     }
@@ -29,7 +28,6 @@ public class Panel extends JPanel implements ActionListener {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(icon, x, y, null);
-        g2D.drawImage(icon2, PANEL_WIDTH - icon2.getWidth(null), PANEL_HEIGHT - icon2.getHeight(null), null);
     }
 
     @Override
@@ -43,16 +41,6 @@ public class Panel extends JPanel implements ActionListener {
         }
         y += yVelocity;
         repaint();
-
-        /* if (x >= PANEL_WIDTH - icon2.getWidth(null) || x < 0) {
-            xVelocity *= -1;
-        }
-        x -= xVelocity;
-        if (y >= PANEL_HEIGHT - icon2.getHeight(null) || y < 0) {
-            yVelocity *= -1;
-        }
-        y -= yVelocity;
-        repaint(); */
     }
 
 }
